@@ -1,0 +1,59 @@
+// Navigation
+
+nav {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0;
+
+  ul {
+    li {
+      display: inline-block;
+      padding: 20px;
+      position: relative;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+      .counter {
+        position: absolute;
+        right: -20px;
+        top: 15px;
+      }
+    }
+  }
+}
+
+.counter {
+  @extend %heart;
+  background-color: $app-grey-1;
+  color: $app-white;
+  display: inline-block;
+  line-height: 40px;
+
+  span {
+    display: inline-block;
+    font-size: 16px;
+    left: 4px;
+    margin: 0 auto;
+    position: absolute;
+    right: -1px;
+    text-align: center;
+    top: -8px;
+    transform: rotate(45deg);
+    z-index: 9;
+  }
+
+  &:after,
+  &:before {
+    background-color: $app-grey-1;
+  }
+
+  &.active {
+    background-color: $app-bright-red;
+    &:after,
+    &:before {
+      background-color: $app-bright-red;
+    }
+  }
+}

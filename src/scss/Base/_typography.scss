@@ -1,0 +1,253 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito:400, 700");
+
+/* Font Variables */
+$base-font-family: "Nunito", sans-serif;
+$base-font-weight: 400;
+$bold-font-weight: 700;
+
+/* Line Heights */
+$line-height-xs-mobile: 1.09375;
+$line-height-s-mobile: 1.11111;
+$line-height-l-mobile: 1.25;
+
+$line-height-xs-desktop: 1.04167;
+$line-height-s-desktop: 1.25;
+$line-height-l-desktop: 1.31579;
+
+/* Font-sizes */
+$font-size-small: 14px;
+$font-size-base-mobile: 16px;
+$font-size-base-desktop: 19px;
+
+$font-size-lead-mobile: 18px;
+$font-size-lead-desktop: 24px;
+
+$font-size-h1-mobile: 32px;
+$font-size-h1-desktop: 48px;
+
+$font-size-h2-mobile: 24px;
+$font-size-h2-desktop: 36px;
+
+$font-size-h3-mobile: 18px;
+$font-size-h3-desktop: 24px;
+
+$font-size-h4-mobile: 16px;
+$font-size-h4-desktop: 19px;
+
+/* Zero off all margins from text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li {
+  font-weight: $base-font-weight;
+  margin: 0;
+}
+
+/* Paragraph Styles - p tag */
+p {
+  @include remsize(font-size, $font-size-base-mobile);
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-base-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+
+  // Lead Paragraph
+
+  &.lead {
+    @include remsize(font-size, $font-size-lead-mobile);
+    line-height: $line-height-s-mobile;
+    margin-bottom: 20px;
+
+    @include breakpoint("small") {
+      @include remsize(font-size, $font-size-lead-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 30px;
+    }
+  }
+
+  // Small Text
+
+  &.small {
+    @include remsize(font-size, $font-size-small);
+    line-height: $line-height-s-mobile;
+    margin-bottom: 20px;
+  }
+}
+
+/* Headings */
+h1 {
+  @include remsize(font-size, $font-size-h1-mobile);
+  font-weight: $bold-font-weight;
+  line-height: $line-height-xs-mobile;
+  margin-bottom: 30px;
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-h1-desktop);
+    line-height: $line-height-xs-desktop;
+    margin-bottom: 50px;
+  }
+}
+
+h2 {
+  @include remsize(font-size, $font-size-h2-mobile);
+  font-weight: $bold-font-weight;
+  line-height: $line-height-s-mobile;
+  margin-bottom: 20px;
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-h2-desktop);
+    line-height: $line-height-xs-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+h3 {
+  @include remsize(font-size, $font-size-h3-mobile);
+  font-weight: $bold-font-weight;
+  line-height: $line-height-s-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-h3-desktop);
+    line-height: $line-height-s-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+h4 {
+  @include remsize(font-size, $font-size-h4-mobile);
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-h4-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+/* Anchor tags */
+
+a {
+  border-bottom: 4px solid;
+  border-color: transparent;
+  color: $app-link-colour;
+  display: inline-block;
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  @include remsize(font-size, $font-size-base-mobile);
+
+  @include breakpoint("small") {
+    @include remsize(font-size, $font-size-base-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    border-color: $app-link-hover-colour;
+    color: $app-link-hover-colour;
+  }
+
+  &:visited {
+    border-color: $app-link-visited-colour;
+    color: $app-link-visited-colour;
+  }
+
+  &:focus {
+    color: $app-link-active-colour;
+    outline: 3px solid $app-focus-colour;
+    outline-offset: 0;
+  }
+
+  &.active {
+    border-color: $app-link-active-colour;
+    color: $app-link-active-colour;
+  }
+
+  /* Link Button */
+  &.link-btn {
+    background: $app-orange;
+    color: $app-white;
+    padding: 15px;
+    transition: all 0.2s linear;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $app-white;
+      border-color: $app-black;
+      color: $app-orange;
+    }
+
+    &--reverse {
+      background: $app-white;
+      color: $app-orange;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $app-orange;
+        color: $app-white;
+      }
+    }
+  }
+}
+
+/* Unordered List */
+ul {
+  li {
+    @include remsize(font-size, $font-size-base-mobile);
+    line-height: $line-height-l-mobile;
+    list-style: none;
+    margin-bottom: 15px;
+
+    @include breakpoint("small") {
+      @include remsize(font-size, $font-size-base-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 5px;
+    }
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  &.bulleted {
+    padding-left: 5px;
+
+    li {
+      list-style: disc;
+      margin-left: 16px;
+    }
+  }
+}
+
+/* Ordered List */
+ol {
+  padding-left: 5px;
+
+  li {
+    @include remsize(font-size, $font-size-base-mobile);
+    line-height: $line-height-l-mobile;
+    list-style: decimal;
+    margin-bottom: 15px;
+    margin-left: 16px;
+
+    @include breakpoint("small") {
+      @include remsize(font-size, $font-size-base-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 5px;
+    }
+  }
+}

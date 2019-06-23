@@ -1,0 +1,26 @@
+button {
+  -webkit-appearance: none;
+  border: 0;
+  cursor: pointer;
+  margin-right: 80px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.favourite-btn {
+  @extend %heart;
+  background-color: $app-grey-1;
+  color: $app-white;
+  display: inline-block;
+  line-height: 40px;
+
+  &.active {
+    background-color: $app-bright-red;
+    &:after,
+    &:before {
+      background-color: $app-bright-red;
+    }
+  }
+}

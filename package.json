@@ -1,0 +1,59 @@
+{
+  "name": "galleryapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "**/*.scss": [
+      "stylefmt",
+      "stylelint --fix",
+      "stylelint --syntax scss",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "outstated": "^2.1.0",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "react-router-dom": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "stylefmt": "^6.0.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.4"
+  }
+}

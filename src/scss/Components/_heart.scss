@@ -1,0 +1,31 @@
+//Heart Shape
+
+%heart {
+  background-color: $app-grey-1;
+  display: inline-block;
+  height: 30px;
+  transform: rotate(-45deg);
+  width: 30px;
+
+  &:before,
+  &:after {
+    background-color: $app-grey-1;
+    border-radius: 50%;
+    content: "";
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+
+  &:after {
+    background-color: $app-grey-1;
+    left: 15px;
+    top: 0;
+  }
+
+  &:before {
+    background-color: $app-grey-1;
+    left: 0;
+    top: -15px;
+  }
+}

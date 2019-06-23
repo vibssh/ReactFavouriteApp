@@ -1,0 +1,51 @@
+/* Configuaration of Colour, Typography */
+
+/* 1. Colours
+**  =================================================================
+*/
+
+$app-purple: #2e358b;
+$app-light-purple: #6f72af;
+$app-bright-purple: #912b88;
+$app-pink: #d53880;
+$app-light-pink: #f499be;
+$app-red: #b10e1e;
+$app-bright-red: #df3034;
+$app-orange: #f47738;
+$app-brown: #b58840;
+$app-yellow: #ffbf47;
+$app-light-green: #85994b;
+$app-green: #006435;
+$app-turquoise: #28a197;
+$app-light-blue: #2b8cc4;
+$app-blue: #005ea5;
+$app-black: #0b0c0c;
+$app-grey-1: #6f777b;
+$app-grey-2: #bfc1c3;
+$app-grey-3: #dee0e2;
+$app-grey-4: #f8f8f8;
+$app-white: #ffffff;
+
+/* 1.1 Text */
+$app-text-colour: $app-black;
+$app-secondary-text-colour: $app-grey-1;
+
+/* 1.2 Links */
+$app-link-colour: $app-purple;
+$app-link-hover-colour: $app-bright-purple;
+$app-link-visited-colour: $app-bright-purple;
+$app-link-active-colour: $app-bright-purple;
+
+/* 1.3 Borders */
+$app-border-colour: $app-grey-2;
+$app-input-border-colour: $app-blue;
+
+/* 1.4 Focus States */
+$app-focus-colour: $app-yellow;
+$app-focus-text-colour: $app-black;
+
+/* 1.5 Error State */
+$app-error-colour: $app-red;
+
+/* 1.6 Brand Colour */
+$app-brand-colour: $app-orange;
